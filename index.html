@@ -1369,11 +1369,7 @@
             https://formspree.io/f/abcxyz12
           -->
 
-          <form
-            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-            method="POST"
-            id="projectForm"
-          >
+          <form id="projectForm">
 
             <!-- Email subject -->
 
@@ -1782,7 +1778,75 @@
     });
 
   </script>
+<script>
 
+const form = document.getElementById("projectForm");
+const statusMessage = document.getElementById("formStatus");
+
+form.addEventListener("submit", async function(event) {
+
+  event.preventDefault();
+
+  const submitButton =
+    form.querySelector("button[type='submit']");
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  statusMessage.textContent = "";
+
+  const formData = new FormData(form);
+
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+
+    const response = await fetch(
+      "/api/project-request",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(data)
+      }
+    );
+
+    const result = await response.json();
+
+    if (result.success) {
+
+      statusMessage.textContent =
+        "✅ Your project request was sent successfully!";
+
+      form.reset();
+
+    } else {
+
+      statusMessage.textContent =
+        "❌ " + result.message;
+
+    }
+
+  } catch (error) {
+
+    console.error(error);
+
+    statusMessage.textContent =
+      "❌ Something went wrong. Please try again.";
+
+  }
+
+  submitButton.disabled = false;
+  submitButton.textContent =
+    "🚀 Send Project Request";
+
+});
+
+</script>
+  
 </body>
 </html>
 ```
