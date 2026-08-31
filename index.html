@@ -1,1556 +1,1788 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>ISMS369 | Custom Cabs, Design & Technology</title>
-
-<meta name="description" content="ISMS369 turns ideas into custom designs, cab concepts and digital technology projects. Explore services, portfolio, custom cabs and project requests.">
-
-<meta name="keywords" content="ISMS369, custom cabs, customized cabs, custom design, vehicle branding, web design, technology projects, India, worldwide">
-
-<meta name="robots" content="index,follow">
-
-<meta name="theme-color" content="#070707">
-
-<link rel="canonical" href="https://isms369.github.io/isms369-website/">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="ISMS369 | You Imagine It. We Customize It.">
-<meta property="og:description" content="Custom cabs, creative design and technology projects from India with a worldwide vision.">
-<meta property="og:url" content="https://isms369.github.io/isms369-website/">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"ISMS369",
-  "url":"https://isms369.github.io/isms369-website/",
-  "description":"Customization, design and technology projects with a worldwide vision.",
-  "slogan":"You Imagine It. We Customize It."
-}
-</script>
-
-<style>
-
-:root{
---bg:#060606;
---panel:#0d0d0d;
---gold:#f5c542;
---text:#f7f7f7;
---muted:#a7a7a7;
---line:#292929;
---max:1180px;
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.65;
-}
-
-a{
-color:inherit;
-text-decoration:none;
-}
-
-.wrap{
-width:min(92%,var(--max));
-margin:auto;
-}
-
-/* HEADER */
-
-header{
-position:fixed;
-z-index:100;
-left:0;
-right:0;
-top:0;
-background:#060606ed;
-border-bottom:1px solid #202020;
-backdrop-filter:blur(14px);
-}
-
-nav{
-height:74px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:950;
-letter-spacing:2px;
-}
-
-.brand img{
-width:48px;
-height:48px;
-object-fit:contain;
-}
-
-.navlinks{
-display:flex;
-align-items:center;
-gap:23px;
-}
-
-.navlinks a{
-color:#ddd;
-}
-
-.navlinks a:hover{
-color:var(--gold);
-}
-
-.navcta{
-padding:9px 15px;
-border:1px solid var(--gold);
-border-radius:999px;
-color:var(--gold)!important;
-}
-
-.menu{
-display:none;
-background:#101010;
-color:#fff;
-border:1px solid #333;
-border-radius:9px;
-padding:8px 11px;
-font-size:1.1rem;
-}
-
-/* HERO */
-
-.hero{
-min-height:100vh;
-padding:130px 0 70px;
-display:grid;
-place-items:center;
-text-align:center;
-
-background:
-radial-gradient(
-circle at 50% 16%,
-#f5c54222,
-transparent 32%
-),
-linear-gradient(
-180deg,
-#090909,
-#060606
-);
-}
-
-.hero .logo{
-width:min(260px,64vw);
-margin-bottom:20px;
-}
-
-.eyebrow,
-.tag{
-color:var(--gold);
-font-weight:900;
-letter-spacing:4px;
-font-size:.76rem;
-}
-
-h1{
-font-size:clamp(2.8rem,7vw,6rem);
-line-height:.96;
-letter-spacing:-4px;
-margin:12px 0;
-}
-
-h1 span{
-color:var(--gold);
-}
-
-.hero p{
-max-width:800px;
-margin:20px auto;
-color:#c6c6c6;
-font-size:1.1rem;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-gap:13px;
-flex-wrap:wrap;
-margin-top:26px;
-}
-
-.btn{
-display:inline-block;
-padding:13px 21px;
-border-radius:999px;
-border:1px solid var(--gold);
-font-weight:900;
-transition:.2s;
-}
-
-.primary{
-background:var(--gold);
-color:#080808;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-/* TRUST */
-
-.trust{
-border-top:1px solid #1c1c1c;
-border-bottom:1px solid #1c1c1c;
-background:#090909;
-}
-
-.trustgrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-text-align:center;
-}
-
-.trustitem{
-padding:20px 10px;
-border-right:1px solid #1c1c1c;
-}
-
-.trustitem:last-child{
-border-right:0;
-}
-
-.trustitem strong{
-display:block;
-color:var(--gold);
-}
-
-.trustitem span{
-color:#888;
-font-size:.86rem;
-}
-
-/* SECTIONS */
-
-section{
-padding:92px 0;
-}
-
-.head{
-text-align:center;
-margin-bottom:40px;
-}
-
-.head h2{
-font-size:clamp(2rem,5vw,3.5rem);
-line-height:1.05;
-margin:8px 0 10px;
-}
-
-.head p{
-max-width:740px;
-margin:auto;
-color:var(--muted);
-}
-
-/* SERVICES */
-
-.grid3,
-.portfolio{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.card,
-.project{
-padding:27px;
-border:1px solid var(--line);
-border-radius:22px;
-background:
-linear-gradient(
-145deg,
-#151515,
-#0a0a0a
-);
-
-transition:.25s;
-}
-
-.card:hover,
-.project:hover{
-transform:translateY(-6px);
-border-color:#574a23;
-}
-
-.icon,
-.mini{
-font-size:2.2rem;
-}
-
-.card h3{
-margin:9px 0 6px;
-}
-
-.card p,
-.project p{
-color:#aaa;
-}
-
-.card a{
-display:inline-block;
-color:var(--gold);
-font-weight:850;
-margin-top:15px;
-}
-
-/* CUSTOM CABS */
-
-.dark{
-background:#090909;
-border-top:1px solid #151515;
-border-bottom:1px solid #151515;
-}
-
-.cabgrid{
-display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:24px;
-}
-
-.cabvisual{
-min-height:430px;
-border:1px solid var(--line);
-border-radius:25px;
-display:grid;
-place-items:center;
-
-background:
-radial-gradient(
-circle,
-#f5c54220,
-transparent 38%
-),
-#0c0c0c;
-}
-
-.cabvisual .emoji{
-font-size:9rem;
-}
-
-.cabcopy{
-display:grid;
-gap:12px;
-}
-
-.feature{
-padding:19px;
-border:1px solid var(--line);
-border-radius:15px;
-background:#0c0c0c;
-}
-
-.feature strong{
-display:block;
-}
-
-.feature span{
-color:#999;
-}
-
-/* PORTFOLIO */
-
-.project{
-min-height:245px;
-display:flex;
-flex-direction:column;
-justify-content:end;
-}
-
-.project .mini{
-margin-bottom:auto;
-}
-
-.project small{
-color:var(--gold);
-font-weight:900;
-letter-spacing:2px;
-}
-
-/* ABOUT */
-
-.aboutgrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-.aboutbox{
-padding:30px;
-border:1px solid var(--line);
-border-radius:22px;
-background:#0d0d0d;
-}
-
-.aboutbox p{
-color:#aaa;
-}
-
-.vision{
-display:grid;
-gap:12px;
-}
-
-.vision div{
-padding:17px;
-border-left:3px solid var(--gold);
-background:#0d0d0d;
-}
-
-.vision strong{
-display:block;
-}
-
-/* PROCESS */
-
-.steps{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:14px;
-}
-
-.step{
-padding:22px;
-border:1px solid var(--line);
-border-radius:18px;
-background:#0d0d0d;
-}
-
-.num{
-color:var(--gold);
-font-size:1.8rem;
-font-weight:950;
-}
-
-.step p{
-color:#999;
-}
-
-/* CONTACT */
-
-.contactgrid{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:25px;
-}
-
-.contactcard{
-padding:28px;
-border:1px solid var(--line);
-border-radius:22px;
-background:#0d0d0d;
-}
-
-.contactcard p{
-color:#999;
-}
-
-.contactpoints{
-display:grid;
-gap:12px;
-margin-top:20px;
-}
-
-.contactpoint{
-padding:15px;
-border:1px solid #292929;
-border-radius:14px;
-}
-
-.contactpoint strong{
-display:block;
-color:var(--gold);
-}
-
-/* FORM */
-
-form{
-display:grid;
-gap:13px;
-}
-
-.row{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:13px;
-}
-
-label{
-font-size:.85rem;
-color:#bbb;
-font-weight:700;
-}
-
-input,
-select,
-textarea{
-width:100%;
-margin-top:6px;
-padding:14px;
-background:#080808;
-color:#fff;
-border:1px solid #333;
-border-radius:12px;
-font:inherit;
-}
-
-textarea{
-min-height:145px;
-resize:vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-outline:none;
-border-color:var(--gold);
-}
-
-.consent{
-font-size:.8rem;
-color:#777;
-}
-
-/* FOOTER */
-
-footer{
-border-top:1px solid #1d1d1d;
-padding:34px 0;
-text-align:center;
-color:#777;
-}
-
-footer strong{
-color:var(--gold);
-}
-
-/* MOBILE */
-
-@media(max-width:850px){
-
-.menu{
-display:block;
-}
-
-.navlinks{
-display:none;
-position:absolute;
-top:74px;
-left:0;
-right:0;
-background:#070707;
-padding:18px 5%;
-flex-direction:column;
-align-items:stretch;
-}
-
-.navlinks.open{
-display:flex;
-}
-
-.grid3,
-.portfolio,
-.steps,
-.trustgrid{
-grid-template-columns:1fr 1fr;
-}
-
-.cabgrid,
-.aboutgrid,
-.contactgrid{
-grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:540px){
-
-.grid3,
-.portfolio,
-.steps,
-.trustgrid,
-.row{
-grid-template-columns:1fr;
-}
-
-.trustitem{
-border-right:0;
-border-bottom:1px solid #1c1c1c;
-}
-
-h1{
-letter-spacing:-2px;
-}
-
-}
-
-</style>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="ISMS369 - Creative technology, websites, custom solutions and digital services.">
+
+  <meta name="theme-color" content="#0b1020">
+
+  <title>ISMS369 | Build Beyond Limits</title>
+
+  <style>
+    /* =========================
+       RESET
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #070b16;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    /* =========================
+       VARIABLES
+    ========================= */
+
+    :root {
+      --bg: #070b16;
+      --bg2: #0d1324;
+      --card: #11182b;
+      --card2: #151e35;
+      --text: #ffffff;
+      --muted: #aab3c7;
+      --accent: #6c63ff;
+      --accent2: #00d4ff;
+      --border: rgba(255,255,255,0.10);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title span {
+      display: inline-block;
+      color: var(--accent2);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        var(--accent2),
+        var(--accent),
+        #ff4ecd
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(7,11,22,0.78);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      height: 75px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent2);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #dce3f4;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent2);
+    }
+
+    .nav-cta {
+      padding: 10px 18px;
+      border-radius: 30px;
+
+      background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent2)
+      );
+
+      color: white !important;
+      font-weight: 700;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+
+      padding-top: 100px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+
+      width: 400px;
+      height: 400px;
+
+      border-radius: 50%;
+
+      filter: blur(100px);
+      opacity: 0.25;
+
+      pointer-events: none;
+    }
+
+    .hero::before {
+      background: var(--accent);
+      top: 10%;
+      left: -150px;
+    }
+
+    .hero::after {
+      background: var(--accent2);
+      bottom: 0;
+      right: -150px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 82px);
+      line-height: 1.02;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 14px 24px;
+      border-radius: 12px;
+
+      border: 1px solid var(--border);
+
+      cursor: pointer;
+      transition: 0.25s;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent2)
+      );
+
+      border: none;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-card {
+      min-height: 450px;
+
+      border: 1px solid var(--border);
+      border-radius: 30px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(0,212,255,0.2),
+          transparent 40%
+        ),
+        linear-gradient(
+          145deg,
+          #131c34,
+          #090e1d
+        );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0 30px 100px rgba(0,0,0,0.35);
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-orbit {
+      width: 270px;
+      height: 270px;
+
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: spin 14s linear infinite;
+    }
+
+    .hero-orbit::before {
+      content: "";
+
+      width: 170px;
+      height: 170px;
+
+      border: 1px dashed var(--accent2);
+      border-radius: 50%;
+    }
+
+    .hero-logo {
+      position: absolute;
+
+      font-size: 45px;
+      font-weight: 900;
+
+      text-align: center;
+    }
+
+    .hero-logo small {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 4px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+      padding: 30px;
+
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,212,255,0.35);
+    }
+
+    .service-icon {
+      width: 55px;
+      height: 55px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 15px;
+
+      background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent2)
+      );
+
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* =========================
+       PORTFOLIO
+    ========================= */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      min-height: 260px;
+
+      border-radius: var(--radius);
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          135deg,
+          #18254b,
+          #0d1224
+        );
+    }
+
+    .project-card:nth-child(2) {
+      background:
+        linear-gradient(
+          135deg,
+          #142d31,
+          #0b1721
+        );
+    }
+
+    .project-card:nth-child(3) {
+      background:
+        linear-gradient(
+          135deg,
+          #2c1734,
+          #111322
+        );
+    }
+
+    .project-content {
+      position: absolute;
+      left: 25px;
+      bottom: 25px;
+    }
+
+    .project-content span {
+      color: var(--accent2);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .project-content h3 {
+      font-size: 25px;
+    }
+
+    /* =========================
+       CUSTOM CABS
+    ========================= */
+
+    .cab-section {
+      background: #090e1b;
+    }
+
+    .cab-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .cab-card {
+      padding: 35px;
+
+      border-radius: 22px;
+      border: 1px solid var(--border);
+
+      background: var(--card);
+    }
+
+    .cab-card h3 {
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    .cab-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .cab-list {
+      list-style: none;
+    }
+
+    .cab-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      color: #dbe2f0;
+    }
+
+    .cab-list li::before {
+      content: "✓";
+      color: var(--accent2);
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-box {
+      padding: 40px;
+
+      border-radius: 25px;
+      background: var(--card);
+
+      border: 1px solid var(--border);
+    }
+
+    .about-box h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .stat {
+      padding: 20px;
+      text-align: center;
+
+      background: rgba(255,255,255,0.04);
+      border-radius: 15px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: var(--accent2);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       PROJECT REQUEST
+    ========================= */
+
+    .request-section {
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(108,99,255,0.15),
+          transparent 55%
+        );
+    }
+
+    .request-wrapper {
+      max-width: 850px;
+      margin: auto;
+
+      padding: 40px;
+
+      background: rgba(17,24,43,0.85);
+
+      border: 1px solid var(--border);
+      border-radius: 25px;
+
+      box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      color: #d9e0ef;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+
+      padding: 14px 15px;
+
+      border-radius: 12px;
+
+      border: 1px solid var(--border);
+
+      background: #090f1e;
+      color: white;
+
+      outline: none;
+
+      transition: 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent2);
+      box-shadow: 0 0 0 3px rgba(0,212,255,0.08);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-row {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Hidden spam field */
+
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      text-align: center;
+
+      border-radius: var(--radius);
+      background: var(--card);
+
+      border: 1px solid var(--border);
+    }
+
+    .contact-card .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 7px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 35px 0;
+
+      background: #050811;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    footer p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid,
+      .about-grid,
+      .cab-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+    }
+
+    @media (max-width: 700px) {
+
+      .nav-links {
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 100%;
+
+        padding: 25px;
+
+        background: #080d1a;
+
+        flex-direction: column;
+
+        transform: translateY(-150%);
+        transition: 0.3s;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .services-grid,
+      .portfolio-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .request-wrapper {
+        padding: 25px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-<div class="wrap">
+  <header>
 
-<nav>
+    <div class="container">
 
-<a class="brand" href="#home">
+      <nav>
 
-<img
-src="isms369-logo.png"
-alt="ISMS369 logo"
->
+        <a href="#home" class="logo">
+          ISMS<span>369</span>
+        </a>
 
-<span>ISMS369</span>
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu">
+          ☰
+        </button>
 
-</a>
+        <ul class="nav-links" id="navLinks">
 
-<button
-class="menu"
-id="menu"
-aria-label="Open navigation"
->
-☰
-</button>
+          <li>
+            <a href="#home">Home</a>
+          </li>
 
-<div
-class="navlinks"
-id="navlinks"
->
+          <li>
+            <a href="#services">Services</a>
+          </li>
 
-<a href="#services">Services</a>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
 
-<a href="#portfolio">Portfolio</a>
+          <li>
+            <a href="#cabs">Custom Cabs</a>
+          </li>
 
-<a href="#cabs">Custom Cabs</a>
+          <li>
+            <a href="#about">About</a>
+          </li>
 
-<a href="#about">About</a>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
 
-<a
-class="navcta"
-href="#contact"
->
-Start a Project
-</a>
+          <li>
+            <a href="#request" class="nav-cta">
+              Start Project
+            </a>
+          </li>
 
-</div>
+        </ul>
 
-</nav>
+      </nav>
 
-</div>
+    </div>
 
-</header>
+  </header>
 
 
-<main id="home">
+  <!-- =========================
+       HOME
+  ========================= -->
 
-<!-- HERO -->
+  <main>
 
-<section class="hero">
+    <section class="hero" id="home">
 
-<div class="wrap">
+      <div class="container">
 
-<img
-class="logo"
-src="isms369-logo.png"
-alt="ISMS369 custom design and technology company logo"
->
+        <div class="hero-grid">
 
-<div class="eyebrow">
-INNOVATE • SOLVE • MAKE • SUCCEED
-</div>
+          <div>
 
-<h1>
-You Imagine It.<br>
-<span>We Customize It.</span>
-</h1>
+            <p class="gradient-text">
+              DIGITAL • CREATIVE • TECHNOLOGY
+            </p>
 
-<p>
-ISMS369 is building a future-focused customization and technology brand from India — creating custom cab concepts, creative design and digital solutions with a worldwide vision.
-</p>
+            <h1>
+              Build
+              <span class="gradient-text">
+                Beyond
+              </span>
+              Limits.
+            </h1>
 
-<div class="buttons">
+            <p>
+              ISMS369 creates modern websites,
+              digital experiences, custom solutions
+              and technology projects designed to
+              turn ideas into reality.
+            </p>
 
-<a
-class="btn primary"
-href="#services"
->
-Explore Services
-</a>
+            <div class="hero-buttons">
 
-<a
-class="btn"
-href="#contact"
->
-Start a Project
-</a>
+              <a
+                href="#request"
+                class="btn btn-primary">
+                🚀 Start a Project
+              </a>
 
-</div>
+              <a
+                href="#portfolio"
+                class="btn btn-secondary">
+                View Portfolio
+              </a>
 
-</div>
+            </div>
 
-</section>
+          </div>
 
 
-<!-- TRUST -->
+          <div class="hero-card">
 
-<div class="trust">
+            <div class="hero-orbit"></div>
 
-<div class="wrap">
+            <div class="hero-logo">
+              ISMS<span class="gradient-text">369</span>
+              <small>CREATE • BUILD • GROW</small>
+            </div>
 
-<div class="trustgrid">
+          </div>
 
-<div class="trustitem">
-<strong>Custom</strong>
-<span>Ideas & concepts</span>
-</div>
+        </div>
 
-<div class="trustitem">
-<strong>Creative</strong>
-<span>Design solutions</span>
-</div>
+      </div>
 
-<div class="trustitem">
-<strong>Digital</strong>
-<span>Technology projects</span>
-</div>
+    </section>
 
-<div class="trustitem">
-<strong>Worldwide</strong>
-<span>Long-term vision</span>
-</div>
 
-</div>
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
-</div>
+    <section class="section" id="services">
 
-</div>
+      <div class="container">
 
+        <div class="section-title">
 
-<!-- SERVICES -->
+          <span>What We Do</span>
 
-<section id="services">
+          <h2>
+            Our <span class="gradient-text">
+              Services
+            </span>
+          </h2>
 
-<div class="wrap">
+          <p>
+            Technology solutions built around
+            your ideas and goals.
+          </p>
 
-<div class="head">
+        </div>
 
-<div class="tag">
-WHAT WE DO
-</div>
 
-<h2>
-Services built around ideas
-</h2>
+        <div class="services-grid">
 
-<p>
-ISMS369 brings customization, design and technology together to turn ideas into practical project concepts.
-</p>
+          <article class="service-card">
 
-</div>
+            <div class="service-icon">🌐</div>
 
+            <h3>Website Development</h3>
 
-<div class="grid3">
+            <p>
+              Modern responsive websites for
+              businesses, creators and projects.
+            </p>
 
+          </article>
 
-<article class="card">
 
-<div class="icon">
-🚕
-</div>
+          <article class="service-card">
 
-<h3>
-Custom Cabs
-</h3>
+            <div class="service-icon">🎨</div>
 
-<p>
-Customized cab concepts covering interiors, branding, passenger experience and future smart features.
-</p>
+            <h3>UI / UX Design</h3>
 
-<a href="#cabs">
-Explore Custom Cabs →
-</a>
+            <p>
+              Clean interfaces and user experiences
+              that are easy and enjoyable to use.
+            </p>
 
-</article>
+          </article>
 
 
-<article class="card">
+          <article class="service-card">
 
-<div class="icon">
-🎨
-</div>
+            <div class="service-icon">💻</div>
 
-<h3>
-Custom Design
-</h3>
+            <h3>Web Applications</h3>
 
-<p>
-Logos, posters, artwork, vehicle graphics, branding concepts and other creative design projects.
-</p>
+            <p>
+              Interactive web apps with useful
+              features and modern interfaces.
+            </p>
 
-<a href="#contact">
-Request Design →
-</a>
+          </article>
 
-</article>
 
+          <article class="service-card">
 
-<article class="card">
+            <div class="service-icon">⚙️</div>
 
-<div class="icon">
-💻
-</div>
+            <h3>Custom Solutions</h3>
 
-<h3>
-Web & Technology
-</h3>
+            <p>
+              Special technology solutions designed
+              around your project's requirements.
+            </p>
 
-<p>
-Websites, games and digital project concepts designed around a customer's idea and goals.
-</p>
+          </article>
 
-<a href="#contact">
-Discuss Technology →
-</a>
 
-</article>
+          <article class="service-card">
 
+            <div class="service-icon">🎮</div>
 
-</div>
+            <h3>Game Projects</h3>
 
-</div>
+            <p>
+              Creative game concepts, prototypes
+              and interactive digital experiences.
+            </p>
 
-</section>
+          </article>
 
 
-<!-- CUSTOM CABS -->
+          <article class="service-card">
 
-<section id="cabs" class="dark">
+            <div class="service-icon">🚀</div>
 
-<div class="wrap">
+            <h3>Digital Projects</h3>
 
-<div class="head">
+            <p>
+              From idea to launch, we help turn
+              creative concepts into working projects.
+            </p>
 
-<div class="tag">
-FEATURED VISION
-</div>
+          </article>
 
-<h2>
-ISMS369 Custom Cabs
-</h2>
+        </div>
 
-<p>
-A future concept for making everyday cab journeys more personalized, comfortable and technology-friendly.
-</p>
+      </div>
 
-</div>
+    </section>
 
 
-<div class="cabgrid">
+    <!-- =========================
+         PORTFOLIO
+    ========================= -->
 
+    <section class="section" id="portfolio">
 
-<div
-class="cabvisual"
-aria-label="ISMS369 custom cab concept"
->
+      <div class="container">
 
-<div class="emoji">
-🚕
-</div>
+        <div class="section-title">
 
-</div>
+          <span>Selected Work</span>
 
+          <h2>
+            ISMS369
+            <span class="gradient-text">
+              Portfolio
+            </span>
+          </h2>
 
-<div class="cabcopy">
+          <p>
+            A showcase area for your projects,
+            websites and technology creations.
+          </p>
 
+        </div>
 
-<div class="feature">
 
-<strong>
-01 · Interior customization
-</strong>
+        <div class="portfolio-grid">
 
-<span>
-Comfort-focused seating, organization and interior design concepts.
-</span>
+          <article class="project-card">
 
-</div>
+            <div class="project-content">
 
+              <span>Web Design</span>
 
-<div class="feature">
+              <h3>Business Website</h3>
 
-<strong>
-02 · Exterior branding
-</strong>
+            </div>
 
-<span>
-Professional graphics and visual identity concepts for individual cabs or fleets.
-</span>
+          </article>
 
-</div>
 
+          <article class="project-card">
 
-<div class="feature">
+            <div class="project-content">
 
-<strong>
-03 · Smart passenger experience
-</strong>
+              <span>Application</span>
 
-<span>
-Future ideas for displays, charging, connectivity and useful passenger information.
-</span>
+              <h3>Digital Dashboard</h3>
 
-</div>
+            </div>
 
+          </article>
 
-<div class="feature">
 
-<strong>
-04 · Safety first
-</strong>
+          <article class="project-card">
 
-<span>
-Any real vehicle modification must be performed by qualified professionals and comply with applicable rules and approvals.
-</span>
+            <div class="project-content">
 
-</div>
+              <span>Creative</span>
 
+              <h3>Game Project</h3>
 
-</div>
+            </div>
 
-</div>
+          </article>
 
-</div>
+        </div>
 
-</section>
+      </div>
 
+    </section>
 
-<!-- PORTFOLIO -->
 
-<section id="portfolio">
+    <!-- =========================
+         CUSTOM CABS
+    ========================= -->
 
-<div class="wrap">
+    <section
+      class="section cab-section"
+      id="cabs">
 
-<div class="head">
+      <div class="container">
 
-<div class="tag">
-PORTFOLIO
-</div>
+        <div class="section-title">
 
-<h2>
-Ideas in progress
-</h2>
+          <span>Built For You</span>
 
-<p>
-Starter categories for showcasing real ISMS369 work as projects are completed. They are not claims of completed client work.
-</p>
+          <h2>
+            Custom
+            <span class="gradient-text">
+              Cabs
+            </span>
+          </h2>
 
-</div>
+          <p>
+            Need something different?
+            We can design a custom solution
+            around your requirements.
+          </p>
 
+        </div>
 
-<div class="portfolio">
 
+        <div class="cab-grid">
 
-<article class="project">
+          <div class="cab-card">
 
-<div class="mini">
-🚕
-</div>
+            <h3>Custom Website</h3>
 
-<small>
-CAB CONCEPT
-</small>
+            <p>
+              A website designed specifically
+              for your brand, project or idea.
+            </p>
 
-<h3>
-Smart City Cab
-</h3>
+            <ul class="cab-list">
 
-<p>
-Future-focused cab experience concept.
-</p>
+              <li>Custom design</li>
+              <li>Mobile responsive</li>
+              <li>Interactive features</li>
+              <li>Project-specific layout</li>
 
-</article>
+            </ul>
 
+          </div>
 
-<article class="project">
 
-<div class="mini">
-🎨
-</div>
+          <div class="cab-card">
 
-<small>
-BRANDING
-</small>
+            <h3>Custom Digital Solution</h3>
 
-<h3>
-Business Identity
-</h3>
+            <p>
+              Tell us what you want to build
+              and we can discuss the best approach.
+            </p>
 
-<p>
-Custom visual identity and design concept.
-</p>
+            <ul class="cab-list">
 
-</article>
+              <li>Requirement planning</li>
+              <li>Feature design</li>
+              <li>Prototype development</li>
+              <li>Project support</li>
 
+            </ul>
 
-<article class="project">
+          </div>
 
-<div class="mini">
-💻
-</div>
+        </div>
 
-<small>
-DIGITAL
-</small>
+      </div>
 
-<h3>
-Web Project
-</h3>
+    </section>
 
-<p>
-Responsive website and digital experience concept.
-</p>
 
-</article>
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
+    <section class="section" id="about">
 
-</div>
+      <div class="container">
 
-</div>
+        <div class="about-grid">
 
-</section>
+          <div>
 
+            <div class="section-title"
+                 style="text-align:left;margin-bottom:20px;">
 
-<!-- ABOUT -->
+              <span>About ISMS369</span>
 
-<section id="about" class="dark">
+              <h2>
+                Ideas into
+                <span class="gradient-text">
+                  Reality.
+                </span>
+              </h2>
 
-<div class="wrap">
+            </div>
 
-<div class="head">
+            <p style="color:var(--muted);">
 
-<div class="tag">
-ABOUT ISMS369
-</div>
+              ISMS369 is a creative technology
+              project focused on building useful,
+              modern and innovative digital
+              experiences.
 
-<h2>
-Small beginning. Big vision.
-</h2>
+            </p>
 
-<p>
-ISMS369 is being developed as a brand that connects creativity, customization and technology.
-</p>
+          </div>
 
-</div>
 
+          <div class="about-box">
 
-<div class="aboutgrid">
+            <h3>
+              Create. Build. Grow.
+            </h3>
 
+            <p>
+              We believe good technology starts
+              with a good idea.
+            </p>
 
-<div class="aboutbox">
+            <p>
+              ISMS369 aims to combine creativity,
+              design and technology to create
+              projects that people can actually use.
+            </p>
 
-<h3>
-Our Mission
-</h3>
 
-<p>
-Turn useful ideas into clear designs, prototypes and digital experiences — while building a brand that can grow from India toward a worldwide market.
-</p>
+            <div class="stats">
 
-</div>
+              <div class="stat">
+                <strong>01</strong>
+                <span>Vision</span>
+              </div>
 
+              <div class="stat">
+                <strong>02</strong>
+                <span>Build</span>
+              </div>
 
-<div class="vision">
+              <div class="stat">
+                <strong>03</strong>
+                <span>Grow</span>
+              </div>
 
-<div>
+            </div>
 
-<strong>
-🇮🇳 Start in India
-</strong>
+          </div>
 
-<span>
-Learn, build and serve local customers responsibly.
-</span>
+        </div>
 
-</div>
+      </div>
 
+    </section>
 
-<div>
 
-<strong>
-🌐 Think worldwide
-</strong>
+    <!-- =========================
+         PROJECT REQUEST
+    ========================= -->
 
-<span>
-Design products and services that can eventually reach international customers.
-</span>
+    <section
+      class="section request-section"
+      id="request">
 
-</div>
+      <div class="container">
 
+        <div class="section-title">
 
-<div>
+          <span>Let's Work Together</span>
 
-<strong>
-🚀 Keep improving
-</strong>
+          <h2>
+            Request a
+            <span class="gradient-text">
+              Project
+            </span>
+          </h2>
 
-<span>
-Build one useful project at a time and learn from feedback.
-</span>
+          <p>
+            Tell ISMS369 what you want to build.
+            Your project information will be sent
+            to our email.
+          </p>
 
-</div>
+        </div>
 
-</div>
 
-</div>
+        <div class="request-wrapper">
 
-</div>
+          <!--
+            IMPORTANT:
+            Replace YOUR_FORMSPREE_ID with the
+            form ID from your Formspree account.
 
-</section>
+            Example:
+            https://formspree.io/f/abcxyz12
+          -->
 
+          <form
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+            id="projectForm"
+          >
 
-<!-- PROCESS -->
+            <!-- Email subject -->
 
-<section id="process">
+            <input
+              type="hidden"
+              name="subject"
+              value="New ISMS369 Project Request"
+            >
 
-<div class="wrap">
 
-<div class="head">
+            <!-- Honeypot spam protection -->
 
-<div class="tag">
-HOW IT WORKS
-</div>
+            <div class="honeypot">
 
-<h2>
-From idea to project
-</h2>
+              <label>
+                Leave this field empty
+              </label>
 
-</div>
+              <input
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+              >
 
+            </div>
 
-<div class="steps">
 
+            <div class="form-grid">
 
-<div class="step">
+              <!-- NAME -->
 
-<div class="num">
-01
-</div>
+              <div class="form-group">
 
-<h3>
-Tell us
-</h3>
+                <label for="name">
+                  Full Name *
+                </label>
 
-<p>
-Describe your idea, goal and requirements.
-</p>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                >
 
-</div>
+              </div>
 
 
-<div class="step">
+              <!-- EMAIL -->
 
-<div class="num">
-02
-</div>
+              <div class="form-group">
 
-<h3>
-Plan
-</h3>
+                <label for="email">
+                  Email Address *
+                </label>
 
-<p>
-Clarify scope, timeline and deliverables.
-</p>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="customer@example.com"
+                  required
+                >
 
-</div>
+              </div>
 
 
-<div class="step">
+              <!-- PHONE -->
 
-<div class="num">
-03
-</div>
+              <div class="form-group">
 
-<h3>
-Create
-</h3>
+                <label for="phone">
+                  Phone Number
+                </label>
 
-<p>
-Develop the design, prototype or digital project.
-</p>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                >
 
-</div>
+              </div>
 
 
-<div class="step">
+              <!-- COMPANY -->
 
-<div class="num">
-04
-</div>
+              <div class="form-group">
 
-<h3>
-Improve
-</h3>
+                <label for="company">
+                  Company / Organization
+                </label>
 
-<p>
-Review feedback and prepare the final result.
-</p>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Company name"
+                >
 
-</div>
+              </div>
 
 
-</div>
+              <!-- SERVICE -->
 
-</div>
+              <div class="form-group">
 
-</section>
+                <label for="service">
+                  Service Required *
+                </label>
 
+                <select
+                  id="service"
+                  name="service"
+                  required
+                >
 
-<!-- CONTACT -->
+                  <option value="">
+                    Select a service
+                  </option>
 
-<section id="contact" class="dark">
+                  <option>
+                    Website Development
+                  </option>
 
-<div class="wrap">
+                  <option>
+                    UI / UX Design
+                  </option>
 
-<div class="head">
+                  <option>
+                    Web Application
+                  </option>
 
-<div class="tag">
-PROJECT REQUEST
-</div>
+                  <option>
+                    Custom Solution
+                  </option>
 
-<h2>
-Let's build your idea
-</h2>
+                  <option>
+                    Game Project
+                  </option>
 
-<p>
-This V3 form is a professional front-end demo. Connect it to a trusted form/email backend before accepting live customer requests.
-</p>
+                  <option>
+                    Other
+                  </option>
 
-</div>
+                </select>
 
+              </div>
 
-<div class="contactgrid">
 
+              <!-- BUDGET -->
 
-<div class="contactcard">
+              <div class="form-group">
 
-<h3>
-Start with an idea
-</h3>
+                <label for="budget">
+                  Approximate Budget
+                </label>
 
-<p>
-Give ISMS369 enough detail to understand what you want to create.
-</p>
+                <select
+                  id="budget"
+                  name="budget"
+                >
 
+                  <option value="">
+                    Select budget
+                  </option>
 
-<div class="contactpoints">
+                  <option>
+                    Under ₹5,000
+                  </option>
 
+                  <option>
+                    ₹5,000 – ₹10,000
+                  </option>
 
-<div class="contactpoint">
+                  <option>
+                    ₹10,000 – ₹25,000
+                  </option>
 
-<strong>
-Best for
-</strong>
+                  <option>
+                    ₹25,000+
+                  </option>
 
-<span>
-Custom cabs, design, websites and technology projects.
-</span>
+                  <option>
+                    Not decided yet
+                  </option>
 
-</div>
+                </select>
 
+              </div>
 
-<div class="contactpoint">
 
-<strong>
-Project details
-</strong>
+              <!-- PROJECT DESCRIPTION -->
 
-<span>
-Budget, timeline and requirements can be discussed with a parent/adult business representative.
-</span>
+              <div class="form-group full">
 
-</div>
+                <label for="message">
+                  Project Details *
+                </label>
 
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your project, features you need, timeline, etc."
+                  required
+                ></textarea>
 
-<div class="contactpoint">
+              </div>
 
-<strong>
-ISMS369 promise
-</strong>
 
-<span>
-Clear communication, practical planning and continuous improvement.
-</span>
+              <!-- SUBMIT -->
 
-</div>
+              <div class="form-group full">
 
+                <div class="submit-row">
 
-</div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="submitBtn"
+                  >
+                    🚀 Send Project Request
+                  </button>
 
-</div>
+                  <span class="form-note">
+                    Your information will be securely
+                    submitted through the configured
+                    form service.
+                  </span>
 
+                </div>
 
-<form id="projectForm">
+              </div>
 
+            </div>
 
-<div class="row">
+          </form>
 
-<div>
+        </div>
 
-<label for="name">
-Name
-</label>
+      </div>
 
-<input
-id="name"
-name="name"
-required
-placeholder="Your name"
->
+    </section>
 
-</div>
 
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
-<div>
+    <section class="section" id="contact">
 
-<label for="email">
-Email
-</label>
+      <div class="container">
 
-<input
-id="email"
-name="email"
-type="email"
-required
-placeholder="you@example.com"
->
+        <div class="section-title">
 
-</div>
+          <span>Get In Touch</span>
 
-</div>
+          <h2>
+            Contact
+            <span class="gradient-text">
+              ISMS369
+            </span>
+          </h2>
 
+        </div>
 
-<div class="row">
 
-<div>
+        <div class="contact-grid">
 
-<label for="service">
-Project type
-</label>
+          <div class="contact-card">
 
-<select
-id="service"
-name="service"
->
+            <div class="icon">📧</div>
 
-<option>
-Custom Cabs
-</option>
+            <h3>Email</h3>
 
-<option>
-Custom Design
-</option>
+            <p>
+              bgb351@gmail.com
+            </p>
 
-<option>
-Website / Technology
-</option>
+          </div>
 
-<option>
-Other
-</option>
 
-</select>
+          <div class="contact-card">
 
-</div>
+            <div class="icon">🌐</div>
 
+            <h3>Website</h3>
 
-<div>
+            <p>
+              ISMS369
+            </p>
 
-<label for="budget">
-Budget range
-</label>
+          </div>
 
-<select
-id="budget"
-name="budget"
->
 
-<option>
-Not decided
-</option>
+          <div class="contact-card">
 
-<option>
-Discuss with ISMS369
-</option>
+            <div class="icon">🚀</div>
 
-<option>
-Small project
-</option>
+            <h3>Projects</h3>
 
-<option>
-Medium project
-</option>
+            <p>
+              Submit a project request
+              above.
+            </p>
 
-<option>
-Large project
-</option>
+          </div>
 
-</select>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </section>
 
+  </main>
 
-<div>
 
-<label for="message">
-Project details
-</label>
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-<textarea
-id="message"
-name="message"
-required
-placeholder="What do you want ISMS369 to create?"
-></textarea>
+  <footer>
 
-</div>
+    <div class="container">
 
+      <div class="footer-inner">
 
-<label class="consent">
+        <div class="logo">
+          ISMS<span>369</span>
+        </div>
 
-<input
-type="checkbox"
-required
->
+        <p>
+          © <span id="year"></span>
+          ISMS369. All rights reserved.
+        </p>
 
-I understand this demo form is not connected to a live business inbox yet.
+        <p>
+          Create • Build • Grow
+        </p>
 
-</label>
+      </div>
 
+    </div>
 
-<button
-class="btn primary"
-type="submit"
->
-Submit Project Request
-</button>
+  </footer>
 
 
-</form>
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
-</div>
+  <script>
 
-</div>
+    /* Mobile menu */
 
-</section>
+    const menuBtn =
+      document.getElementById("menuBtn");
 
-</main>
+    const navLinks =
+      document.getElementById("navLinks");
 
+    menuBtn.addEventListener("click", () => {
 
-<!-- FOOTER -->
+      navLinks.classList.toggle("active");
 
-<footer>
+    });
 
-<div class="wrap">
 
-<p>
-<strong>
-ISMS369
-</strong>
+    /* Close mobile menu */
 
-•
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
 
-INNOVATE • SOLVE • MAKE • SUCCEED
-</p>
+        link.addEventListener("click", () => {
 
-<p>
-© <span id="year"></span>
-ISMS369.
-All rights reserved.
-</p>
+          navLinks.classList.remove("active");
 
-</div>
+        });
 
-</footer>
+      });
 
 
-<script>
+    /* Current year */
 
-const menu =
-document.getElementById("menu");
+    document.getElementById("year")
+      .textContent = new Date().getFullYear();
 
-const navlinks =
-document.getElementById("navlinks");
 
-menu.onclick = () => {
+    /* Submit button */
 
-navlinks.classList.toggle("open");
+    const form =
+      document.getElementById("projectForm");
 
-};
+    const submitBtn =
+      document.getElementById("submitBtn");
 
+    form.addEventListener("submit", () => {
 
-navlinks
-.querySelectorAll("a")
-.forEach(a => {
+      submitBtn.disabled = true;
 
-a.onclick = () =>
-navlinks.classList.remove("open");
+      submitBtn.textContent =
+        "Sending Request... 🚀";
 
-});
+    });
 
-
-document
-.getElementById("year")
-.textContent =
-new Date().getFullYear();
-
-
-document
-.getElementById("projectForm")
-.onsubmit = e => {
-
-e.preventDefault();
-
-alert(
-"Your project request was captured by this demo form. Connect a form backend to receive real submissions."
-);
-
-e.target.reset();
-
-};
-
-</script>
+  </script>
 
 </body>
 </html>
+```
